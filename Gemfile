@@ -7,7 +7,6 @@ gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
-gem 'factory_girl_rails'
 gem 'bcrypt'
 gem 'paperclip', "~> 4.1"
 gem 'launchy'
@@ -17,11 +16,13 @@ group :development do
   gem 'binding_of_caller'
   gem 'quiet_assets'
   gem 'bootstrap-sass'
+  gem 'letter_opener'
 end
 
 group :test, :development do
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'factory_girl_rails', "~> 4.0"
 end
 
 group :test do

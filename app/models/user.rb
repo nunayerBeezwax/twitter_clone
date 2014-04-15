@@ -1,7 +1,11 @@
 class User < ActiveRecord::Base
   has_secure_password
 
-  has_attached_file :avatar, :styles => { :medium => "300x300>",
-                    :thumb => "50x50>" }, :default_url => "/images/:style/missing.png"
-  validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+  before_validation :send_welcome_message
+
+private
+  def send_welcome_message
+    UserMailer.signup_confirmation(self)
+  end
+
 end
