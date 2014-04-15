@@ -5,8 +5,16 @@
   <li><%= tweet.content %></li>
 <% end %>
 <br>
-<%= link_to "New Tweet", new_user_tweet_path(@user.id), :class =>'btn btn-primary' %>
 
+<h3>Followers</h3>
+<% @user.followers.each do |follower| %>
+  <li><%= follower.name %></li>
+<% end %>
+<br>
+
+<%= link_to "New Tweet", new_tweet_path(@user), :class =>'btn btn-primary' %>
+
+<%= link_to "Follow user", user_followings_path(@user), :method => :post %>
 <%= link_to "User Menu", users_path, :class=> "btn btn-primary" %>
 <%= link_to "Edit User", edit_user_path, :class=> "btn btn-warning" %>
 <%= link_to "Delete", user_path(@user),

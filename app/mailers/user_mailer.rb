@@ -7,7 +7,8 @@ class UserMailer < ActionMailer::Base
     mail to: user.email, subject: "Sign Up Confirmation"
   end
 
-  def notify(user)
+  def notify(user, tweet)
+    @tweet = tweet
     @user = user
     mail to: user.email, subject: "Someone Tweeted About You"
   end

@@ -6,7 +6,7 @@ class TweetsController < ApplicationController
 
   def new
     @tweet = Tweet.new
-    @user = User.find(params[:user_id])
+    @user = User.find(params[:format])
   end
 
   def create
@@ -17,6 +17,7 @@ class TweetsController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:id])
     @tweet = Tweet.find(params[:id])
   end
 

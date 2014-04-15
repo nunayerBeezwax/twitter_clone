@@ -11,13 +11,14 @@ gem 'bcrypt'
 gem 'paperclip', '~> 4.1'
 gem 'launchy'
 gem 'textacular', '~> 3.0'
+gem 'letter_opener'
+
 
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'quiet_assets'
   gem 'bootstrap-sass'
-  gem 'letter_opener'
 end
 
 group :test, :development do

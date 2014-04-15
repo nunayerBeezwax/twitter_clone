@@ -6,9 +6,9 @@ class Tweet < ActiveRecord::Base
   def send_notification
     handles = User.all.pluck(:name)
     handles.each do |h|
-      if self.content.match(h)
+      if self.content.include?(h)
         user = User.find_by_name(h)
-        UserMailer.notify(user)
+        UserMailer.notify(user, self)
       end
     end
   end

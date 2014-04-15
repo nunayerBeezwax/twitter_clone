@@ -8,4 +8,5 @@ describe User do
   end
 
   it { should have_many :tweets }
+  it { should have_many(:followers).through :followings }
 end

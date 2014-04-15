@@ -7,7 +7,9 @@ TwitterClone::Application.routes.draw do
 
   resources :users do
     resources :tweets
+    resources :followings
   end
   resources :sessions
-
+  resources :tweets
+  resources :followings
 end
