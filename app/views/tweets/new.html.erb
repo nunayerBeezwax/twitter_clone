@@ -1,0 +1,10 @@
+
+<h1>What would you like to Tweet?</h1>
+
+<h2>Text</h2>
+  <%= form_for :tweet, :url =>"/users/#{@user.id}/tweets" do |f| %>
+    <%= f.label :content %>
+    <%= f.text_field :content %>
+    <%= f.submit %>
+
+  <% end %>

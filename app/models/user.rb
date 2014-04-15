@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
   has_secure_password
+  has_many :tweets
 
-  before_validation :send_welcome_message
+  after_create :send_welcome_message
 
 private
   def send_welcome_message

@@ -1,12 +1,5 @@
 <h1> <%= @user.name %> </h1>
 
-<h3>Previous Tweets</h3>
-<% @user.tweets.each do |tweet| %>
-  <li><%= tweet.content %></li>
-<% end %>
-<br>
-<%= link_to "New Tweet", new_user_tweet_path(@user.id), :class =>'btn btn-primary' %>
-
 <%= link_to "User Menu", users_path, :class=> "btn btn-primary" %>
 <%= link_to "Edit User", edit_user_path, :class=> "btn btn-warning" %>
 <%= link_to "Delete", user_path(@user),

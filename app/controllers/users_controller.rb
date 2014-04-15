@@ -2,10 +2,10 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    render('users/index.html.erb')
   end
 
   def new
+    @user = User.new
   end
 
   def create
@@ -21,12 +21,10 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    render('users/show.html.erb')
   end
 
   def edit
     @user = User.find(params[:id])
-    render('users/edit.html.erb')
   end
 
   def update
@@ -41,12 +39,13 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     @user.destroy
+    session.clear
     flash[:notice] = "Account Deleted"
-    redirect_to root_url
+    redirect_to logout_path
   end
 
 private
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 end
