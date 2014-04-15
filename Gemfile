@@ -8,8 +8,9 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bcrypt'
-gem 'paperclip', "~> 4.1"
+gem 'paperclip', '~> 4.1'
 gem 'launchy'
+gem 'textacular', '~> 3.0'
 
 group :development do
   gem 'better_errors'
