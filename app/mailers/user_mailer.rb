@@ -12,4 +12,10 @@ class UserMailer < ActionMailer::Base
     @user = user
     mail to: user.email, subject: "Someone Tweeted About You"
   end
+
+  def following_email(following)
+    @follower = User.find_by_id(following[:follower_id])
+    @followee = User.find_by_id(following[:user_id])
+    mail to: @followee.email, subject: "Someone is Following You!"
+  end
 end

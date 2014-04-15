@@ -3,11 +3,19 @@ Twitter clone
 For today's project, let's make a clone of Twitter.
 Second day of practice with AJAX, first day of using Action Mailer.
 ----------------------------
-* DONE * Start off with user signups. When somebody signs up, send them a welcome email.
+* DONE * Start off with user signups.
 
-* DONE * Then, let users post tweets. If another user's handle is mentioned in the tweet, send that user a notification email.
+* DONE * When somebody signs up, send them a welcome email.
 
-* Now, let users follow each other. Of course, notify somebody by email if when they are followed. Add pages showing who a user follows, and who follows them.
+* DONE * Then, let users post tweets.
+
+* DONE * If another user's handle is mentioned in the tweet, send that user a notification email.
+
+* DONE * Now, let users follow each other.
+
+* DONE * Of course, notify somebody by email if when they are followed.
+
+* DONE * Add pages showing who follows each user.
 
 * Let users upload photos in their tweets.
 
